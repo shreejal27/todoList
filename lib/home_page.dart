@@ -23,13 +23,12 @@ class _HomePageState extends State<HomePage> {
       floatingActionButton: FloatingActionButton(
         // backgroundColor: Colors.blue,
         // foregroundColor: Colors.black,
-        onPressed: () {
-          Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => const AddTask(),
-              ));
-        },
+        // ignore: sort_child_properties_last
+        onPressed: () => showDialog(
+          context: context,
+          builder: (context) => const AddTask(),
+          barrierDismissible: false,
+        ),
         child: const Icon(Icons.add),
       ),
       appBar: AppBar(

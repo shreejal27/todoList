@@ -16,8 +16,8 @@ class _AddTaskState extends State<AddTask> {
   final formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Padding(
+    return AlertDialog(
+      content: Padding(
         padding: const EdgeInsets.all(100),
         child: Form(
           key: formKey,
@@ -53,16 +53,17 @@ class _AddTaskState extends State<AddTask> {
               ElevatedButton(
                 onPressed: () async {
                   if (formKey.currentState!.validate()) {
-                    await Navigator.of(context).push(
-                      MaterialPageRoute(
-                        //CupertinoPageRoute for ios
-                        builder: (context) => ToDo(
-                          title: task.text,
-                          id: id.text,
-                        ),
-                      ),
-                    );
-                    formKey.currentState!.reset();
+                    Text("Hello");
+                    // await Navigator.of(context).push(
+                    //   MaterialPageRoute(
+                    //     //CupertinoPageRoute for ios
+                    //     builder: (context) => ToDo(
+                    //       title: task.text,
+                    //       id: id.text,
+                    //     ),
+                    //   ),
+                    // );
+                    // formKey.currentState!.reset();
                   }
                 },
                 child: const Text("Add"),
