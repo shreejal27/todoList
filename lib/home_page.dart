@@ -1,6 +1,7 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:todo/add_task.dart';
 import 'package:todo/todo_list.dart';
 
 import 'model/todo.dart';
@@ -23,7 +24,11 @@ class _HomePageState extends State<HomePage> {
         // backgroundColor: Colors.blue,
         // foregroundColor: Colors.black,
         onPressed: () {
-          showDialog(builder: (BuildContext context) {}, context: context);
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const AddTask(),
+              ));
         },
         child: const Icon(Icons.add),
       ),
@@ -37,29 +42,6 @@ class _HomePageState extends State<HomePage> {
               todo: todos[index],
             );
           }),
-    );
-  }
-
-  void showDialog() {
-    // flutter defined function
-    show(
-      context: context,
-      builder: (BuildContext context) {
-        // return object of type Dialog
-        return AlertDialog(
-          title: const Text("Alert Dialog title"),
-          content: const Text("Alert Dialog body"),
-          actions: <Widget>[
-            // usually buttons at the bottom of the dialog
-            TextButton(
-              child: const Text("Close"),
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
-            ),
-          ],
-        );
-      },
     );
   }
 }
