@@ -10,20 +10,20 @@ class ToDo {
   });
 }
 
-List<ToDo> todos = [
-  ToDo(
-    id: 1,
-    title: "Aaja padhnu parcha",
-    isCompleted: false,
-  ),
-  ToDo(
-    id: 2,
-    title: "Aaja ghumna janey",
-    isCompleted: true,
-  ),
-  ToDo(
-    id: 3,
-    title: "Homework gara",
-    isCompleted: false,
-  ),
-];
+// List<ToDo> todos = [
+//   ToDo(
+//     id: 1,
+//     title: "Aaja padhnu parcha",
+//     isCompleted: false,
+//   ),
+//   ToDo(
+//     id: 2,
+//     title: "Aaja ghumna janey",
+//     isCompleted: true,
+//   ),
+//   ToDo(
+//     id: 3,
+//     title: "Homework gara",
+//     isCompleted: false,
+//   ),
+// ];

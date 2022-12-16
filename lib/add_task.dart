@@ -67,17 +67,11 @@ class _AddTaskState extends State<AddTask> {
                 child: ElevatedButton(
                   onPressed: () async {
                     if (formKey.currentState!.validate()) {
-                      const Text("Hello");
-                      // await Navigator.of(context).push(
-                      //   MaterialPageRoute(
-                      //     //CupertinoPageRoute for ios
-                      //     builder: (context) => ToDo(
-                      //       title: task.text,
-                      //       id: id.text,
-                      //     ),
-                      //   ),
-                      // );
-                      // formKey.currentState!.reset();
+                      Todo todo = ToDo(
+                        id: DateTime.now().millisecondsSinceEpoch,
+                        title: _todoController.text,
+                        isCompleted: false,
+                      );
                     }
                   },
                   child: const Text("Save"),
