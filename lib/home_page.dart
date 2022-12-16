@@ -39,6 +39,11 @@ class _HomePageState extends State<HomePage> {
           itemBuilder: (BuildContext context, int index) {
             return ToDolist(
               todo: todos[index],
+              onDelete: (id) {
+                setState(() {
+                  todos.removeWhere((element) => element.id == id);
+                });
+              },
             );
           }),
     );

@@ -8,9 +8,13 @@ class ToDolist extends StatelessWidget {
   const ToDolist({
     Key? key,
     required this.todo,
+    required this.onDelete,
   }) : super(key: key);
 
   final ToDo todo;
+  final Function(int id) onDelete;
+  //id in pass gareko taha pauna kunchai id lai delete garney ho bhnera
+
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -43,7 +47,9 @@ class ToDolist extends StatelessWidget {
               size: 20,
               // color: Colors.grey,
             ),
-            onPressed: () {},
+            onPressed: () {
+              onDelete(todo.id);
+            },
           ),
         ),
       ],
